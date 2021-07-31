@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Task</string>
+    <string name="write_a_message">Write a message</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit</string>
+</resources>

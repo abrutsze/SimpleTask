@@ -1,0 +1,87 @@
+
+ext {
+    compileVersion = 30
+    buildVersion = "30.0.2"
+    minVersion = 21
+    targetVersion = 230
+    appVersionName = "0.0.1"
+    appVersionCode = 1
+    appcompat = '1.2.0'
+    coreKtx = '1.3.2'
+    materialVersion = '1.3.0'
+    constraintlayout = '2.0.4'
+    junitAndroid = '1.1.2'
+    junit = '4.13.2'
+    espressoCore = '3.3.0'
+    moshiConverterVersion = '2.9.0'
+    retrofitVersion = '2.9.0'
+    loggingVersion = '4.9.0'
+    roomVersion = '2.2.5'
+    koinVersion = '2.2.2'
+    coroutinesVersion = '1.4.2'
+    lifecycleVersion = '2.2.0'
+    legacySupportVersion = "1.0.0"
+    glideVersion = '4.11.0'
+    navigationVersion = '2.2.1'
+    androidXAnnotation = '1.1.0'
+    lifeCycle = '2.3.0'
+
+
+    standart = [
+            kotlin          :   "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+            material        :   "com.google.android.material:material:$materialVersion",
+            core            :   "androidx.core:core-ktx:$coreKtx",
+            appCompat       :   "androidx.appcompat:appcompat:$appcompat",
+            constrLayout    :   "androidx.constraintlayout:constraintlayout:$constraintlayout",
+            legacySupport   :   "androidx.legacy:legacy-support-v4:$legacySupportVersion",
+            annotation      :   "androidx.annotation:annotation:$androidXAnnotation",
+            jUnit           :   "junit:junit:$junit",
+            andJUnit        :   "androidx.test.ext:junit:$junitAndroid",
+            espresso        :   "androidx.test.espresso:espresso-core:$espressoCore"
+    ]
+
+    arch = [
+            liveData        :   "androidx.lifecycle:lifecycle-livedata-ktx:$lifeCycle",
+            viewModel       :   "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifeCycle",
+            lifeCycleJ8     :   "androidx.lifecycle:lifecycle-common-java8:$lifeCycle",
+            coroutines      :   "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion",
+            coroutinesAnd   :   "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion",
+            navFragment     :   "androidx.navigation:navigation-ui-ktx:$navigationVersion",
+            navUI           :   "androidx.navigation:navigation-fragment-ktx:$navigationVersion",
+
+    ]
+
+    di = [
+
+            koin            :   "org.koin:koin-android:$koinVersion",
+            koinScope       :   "org.koin:koin-androidx-scope:$koinVersion",
+            koinViewModel   :   "org.koin:koin-androidx-viewmodel:$koinVersion",
+            koinFragment    :   "org.koin:koin-androidx-fragment:$koinVersion"
+    ]
+    thirdP = [
+            retrofit        :   "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            moshi           :   "com.squareup.retrofit2:converter-moshi:$moshiConverterVersion",
+            logInterceptor  :   "com.squareup.okhttp3:logging-interceptor:$loggingVersion",
+            glide           :   "com.github.bumptech.glide:glide:$glideVersion"
+    ]
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

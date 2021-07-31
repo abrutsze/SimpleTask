@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion compileVersion
+    buildToolsVersion buildVersion
+
+    defaultConfig {
+        minSdkVersion minVersion
+        targetSdkVersion targetSdkVersion
+        versionCode appVersionCode
+        versionName appVersionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(path: ':core')
+
+    implementation standart.kotlin
+    implementation standart.core
+    implementation standart.appCompat
+    testImplementation standart.jUnit
+    androidTestImplementation standart.andJUnit
+    androidTestImplementation standart.espresso
+
+    implementation di.koin
+    
+    implementation thirdP.retrofit
+    implementation thirdP.moshi
+    implementation thirdP.logInterceptor
+
+}

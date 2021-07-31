@@ -1,0 +1,5 @@
+include ':core'
+include ':domian'
+include ':data'
+include ':app'
+rootProject.name = "Task"

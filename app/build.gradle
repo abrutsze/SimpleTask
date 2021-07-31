@@ -1,0 +1,75 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion compileVersion
+    buildToolsVersion buildVersion
+
+    defaultConfig {
+        applicationId "com.example.task"
+        minSdkVersion minVersion
+        targetSdkVersion targetSdkVersion
+        versionCode appVersionCode
+        versionName appVersionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    defaultConfig{
+        vectorDrawables.useSupportLibrary = true
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(path: ':core')
+    implementation project(path: ':data')
+    implementation project(path: ':domian')
+
+    implementation standart.kotlin
+    implementation standart.material
+    implementation standart.core
+    implementation standart.appCompat
+    implementation standart.constrLayout
+    implementation standart.legacySupport
+    implementation standart.annotation
+    testImplementation standart.jUnit
+    androidTestImplementation standart.andJUnit
+    androidTestImplementation standart.espresso
+
+    implementation arch.coroutines
+    implementation arch.coroutinesAnd
+    implementation arch.liveData
+    implementation arch.viewModel
+    implementation arch.lifeCycleJ8
+    implementation arch.navFragment
+    implementation arch.navUI
+
+
+    implementation di.koin
+    implementation di.koinScope
+    implementation di.koinViewModel
+    implementation di.koinFragment
+
+    implementation thirdP.glide
+
+}
